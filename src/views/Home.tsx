@@ -3,7 +3,7 @@ import Features from "../components/Features"
 
 const Home = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2">
+        <div className="min-h-dvh grid grid-cols-1 md:grid-cols-2 md:grid-rows-2">
             <div className="md:mt-20">
                 <div className="font-anton text-8xl uppercase mt-20 flex flex-col items-center">
                     <div className="relative">
