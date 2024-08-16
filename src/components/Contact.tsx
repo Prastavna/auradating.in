@@ -9,6 +9,7 @@ const Contact = () => {
         <input
           type="email"
           placeholder="email"
+          required
           className="border border-foreground px-2 py-3 bg-transparent placeholder:text-foreground placeholder:opacity-80"
         />
         <button
