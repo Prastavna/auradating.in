@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 
 interface SwitchProps {
   onChange?: React.Dispatch<React.SetStateAction<boolean>>
@@ -35,6 +35,7 @@ const Switch: React.FC<SwitchProps> = ({ onChange, initialState = false }) => {
 const Contact = () => {
   const [isFemale, setIsFemale] = useState(true);
   const [submitted, setSubmitted] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -51,12 +52,12 @@ const Contact = () => {
       console.error('Error:', error)
     } finally {
       setSubmitted(true)
-      e.currentTarget.reset()
+      formRef.current?.reset()
     }
   }
   return (
     <div>
-      <form onSubmit={handleSubmit} className="flex flex-col items-center text-lg">
+      <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col items-center text-lg">
         <Switch
           onChange={setIsFemale}
           initialState={isFemale}
@@ -71,7 +72,7 @@ const Contact = () => {
         />
         <button
           type="submit"
-          className="bg-foreground text-background font-medium p-3 mt-2 w-full disabled:cursor-not-allowed"
+          className="bg-foreground text-background font-medium p-3 mt-2 w-full disabled:cursor-not-allowed disabled:text-opacity-50"
           disabled={submitted}
         >
           {submitted ? 'Thanks! See you soon...' : 'Join the waitlist'}
