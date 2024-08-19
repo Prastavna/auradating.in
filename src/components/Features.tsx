@@ -1,20 +1,18 @@
 const Features = () => {
   return (
     <div className="uppercase">
-      <div className="grid grid-cols-[3rem_1fr] justify-items-center">
-        <div className="w-8 h-8 bg-foreground rounded-full"/>
-        <div className="text-2xl font-semibold justify-self-start ml-4">
+      <div className="flex flex-col gap-8 items-center md:items-start">
+        <div className="text-2xl font-semibold underline underline-offset-4">
           What's in the store?
         </div>
-        <div className="w-2 -mt-1 h-full bg-gradient-to-b from-foreground to-background"/>
-        <div className="mt-8 ml-4">
-          <ul className="flex flex-col gap-8">
-            <li>AI curated matches Aligning with your interests. AI driven matching</li>
-            <li>Profile suggestions adaptING to your choices</li>
-            <li>Professionally verified profiles only</li>
-            <li>Unrivaled profile screening for authenticity</li>
-            <li>Find matches based on your favourite spots</li>
-            <li>Plan dates at places you both love</li>
+        <div className="ml-4">
+          <ul className="flex flex-col gap-8 list-disc">
+            <li><span className="font-semibold">Tailor Fit: </span>AI-powered matches that align perfectly with your unique interests</li>
+            <li><span className="font-semibold">Get Smart: </span>Profiles that evolve with your preferences</li>
+            <li><span className="font-semibold">Verified Vibes Only: </span>Connect with real, verified profiles — say goodbye to fake connections</li>
+            <li><span className="font-semibold">Spot On: </span>Meet matches who share your favorite hangouts — love is just around the corner</li>
+            <li><span className="font-semibold">Date Planning: </span>Effortlessly plan dates at places you both adore, making every outing special</li>
+            <li><span className="font-semibold">Invite Only: </span>Invite your friends to join</li>
           </ul>
         </div>
       </div>
