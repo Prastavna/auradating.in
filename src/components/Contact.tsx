@@ -68,7 +68,7 @@ const Contact = () => {
           placeholder="email"
           required
           disabled={submitted}
-          className="border border-foreground px-2 py-3 bg-transparent placeholder:text-foreground placeholder:opacity-80"
+          className="w-full border border-foreground px-2 py-3 bg-transparent placeholder:text-foreground placeholder:opacity-80"
         />
         <button
           type="submit"
